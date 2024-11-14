@@ -7,12 +7,11 @@ export default function App() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="m-auto mt-[70px] flex h-[350px] w-[350px] flex-col gap-y-1 border-4 p-10 shadow-xl shadow-zinc-300"
+      className="shadow-l bg- m-auto mt-[100px] flex h-[350px] w-[350px] flex-col gap-y-1 rounded-sm border-4 bg-slate-200 p-7 shadow-zinc-500"
     >
-      <h2 className="mb-2 text-center font-mono text-2xl font-bold">
-        Login Form
-      </h2>
+      <h2 className="font- mb-7 text-center font-mono text-2xl">Login</h2>
       <input
+        className=""
         placeholder="USERNAME"
         {...register('username', { required: true, maxLength: 20 })}
       />
@@ -23,7 +22,10 @@ export default function App() {
       />
       <br />
 
-      <input type="submit" />
+      <input
+        className="font-color-white ml-20 w-[80px] border-none border-slate-800 bg-slate-600 p-0.5 font-bold text-slate-50"
+        type="submit"
+      />
     </form>
   );
 }
